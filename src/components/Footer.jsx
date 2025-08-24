@@ -1,0 +1,8 @@
+import { Link } from "react-router";
+import React from "react";
+
+export function Footer() {
+  return (
+    <h1>Footer</h1>
+  )
+}
