@@ -1,11 +1,20 @@
 import { Link } from "react-router";
-import React from "react";
+import React, { useContext } from "react";
+
+import { ThemeContext } from "../context/ThemeContext";
+
+import {MoonStarsIcon, SunIcon} from "@phosphor-icons/react";
 
 export function Header() {
+  const { theme, toggle } = useContext(ThemeContext)
+
+
   return (
-    <div className="font-sans text-gray-800 bg-gray-50 min-h-screen">
+
+    <div className="pb-15">
         {/* Header */}
-        <header className="flex items-center justify-between px-8 py-6 bg-white shadow-sm sticky top-0 z-50">
+        <header className="fixed top-0 left-0 w-full flex items-center justify-between px-8 py-6 bg-white shadow-sm z-50 ">
+
             <div className="text-xl font-bold text-indigo-700">StayOn</div>
 
             {/* Nav com UL e LI usando Link */}
@@ -26,9 +35,16 @@ export function Header() {
                 <li>
                 <Link to="/cadastro" className="hover:text-indigo-700">Cadastrar</Link>
                 </li>
+                <button className="hover:text-indigo-700 cursor-pointer" onClick={toggle} >
+                  {theme === "dark"? (
+                    <SunIcon size={24} weight="fill"/>
+                  ) : (
+                    <MoonStarsIcon size={24} weight="fill" />
+                  )}
+                  </button>
             </ul>
             </nav>
         </header>
-        </div>
+    </div>
   );
 }
