@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-export function Cadastro(){
+export function QuemSomos(){
     return(
         <h1>produtos    </h1>
     )
