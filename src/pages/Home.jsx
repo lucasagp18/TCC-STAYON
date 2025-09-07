@@ -1,34 +1,39 @@
 import React from "react";
+import bracelete from "../assets/bracelete.png";
+
+
 
 export function Home() {
   return (
-    <div className="font-sans text-gray-800 bg-gray-50 min-h-screen">
+    <div className="font-sans text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-slate-900 min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gray-200 py-8 sm:py-12 lg:py-20">
+      <section className="bg-gray-200 dark:bg-slate-800 py-8 sm:py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12">
           <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight bg-gradient-to-r from-blue-800 to-blue-600 text-transparent bg-clip-text">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight bg-gradient-to-r from-blue-800 to-blue-600 dark:from-blue-400 dark:to-blue-300 text-transparent bg-clip-text">
               Revolucionando a <br />
               Segurança no Transporte
             </h1>
-            <p className="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+            <p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
               Um sistema integrado de monitoramento que salva vidas e otimiza a gestão de frotas
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="bg-indigo-600 hover:bg-indigo-700 text-white rounded-md px-6 py-3 font-semibold shadow-md transition-colors duration-200">
+              <button className="bg-indigo-600 hover:bg-indigo-700 dark:bg-purple-600 dark:hover:bg-purple-700 text-white rounded-md px-6 py-3 font-semibold shadow-md transition-colors duration-200">
                 Quero aplicativo
               </button>
-              <button className="border border-indigo-600 text-indigo-600 rounded-md px-6 py-3 font-semibold hover:bg-indigo-50 transition-colors duration-200">
+              <button className="border border-indigo-600 dark:border-purple-600 text-indigo-600 dark:text-purple-400 rounded-md px-6 py-3 font-semibold hover:bg-indigo-50 dark:hover:bg-slate-700 transition-colors duration-200">
                 Saiba Mais
               </button>
             </div>
           </div>
-          <div className="w-full lg:w-1/2 bg-white rounded-3xl shadow-lg p-6 sm:p-10 flex justify-center items-center">
+
+          <div className="w-full lg:w-1/2  rounded-3xl  p-6 sm:p-10 flex justify-center items-center">
+
             {/* Placeholder for image */}
-            <img
-              src="/assets/oculos-bracelete.png"
+
+            <img src={bracelete}
               alt="Óculos e Bracelete StayOn"
-              className="max-w-full max-h-48 sm:max-h-64 object-contain"
+              className="max-w-full max-h-68 sm:max-h-200 object-contain"
             />
           </div>
         </div>
@@ -36,9 +41,9 @@ export function Home() {
 
       {/* Como Funciona */}
       <section className="max-w-6xl mx-auto text-center px-4 sm:px-6 py-12 sm:py-16">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Como Funciona</h2>
-        <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-8 rounded-full"></div>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-8 sm:mb-12 text-sm sm:text-base">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100">Como Funciona</h2>
+        <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-400 dark:to-blue-300 mx-auto mb-8 rounded-full"></div>
+        <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8 sm:mb-12 text-sm sm:text-base">
           Um sistema integrado e intuitivo para máxima proteção
         </p>
 
@@ -67,11 +72,11 @@ export function Home() {
       </section>
 
       {/* Recursos Inovadores */}
-      <section className="bg-gray-200 py-12 sm:py-16 px-4 sm:px-6">
+      <section className="bg-gray-200 dark:bg-slate-800 py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto text-center mb-8 sm:mb-12">
-          <h3 className="text-2xl sm:text-3xl font-semibold mb-3 text-gray-900">Recursos Inovadores</h3>
-          <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-8 rounded-full"></div>
-          <p className="text-gray-600 max-w-3xl mx-auto text-sm sm:text-base">
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-3 text-gray-900 dark:text-gray-100">Recursos Inovadores</h3>
+          <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-400 dark:to-blue-300 mx-auto mb-8 rounded-full"></div>
+          <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-sm sm:text-base">
             Tecnologia de ponta para máxima segurança e eficiência
           </p>
         </div>
@@ -101,9 +106,9 @@ export function Home() {
 
       {/* Benefícios para Empresas */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-gray-900">Benefícios para Empresas</h2>
-        <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mx-auto mb-8 rounded-full"></div>
-        <p className="text-center text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-gray-900 dark:text-gray-100">Benefícios para Empresas</h2>
+        <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-400 dark:to-blue-300 mx-auto mb-8 rounded-full"></div>
+        <p className="text-center text-gray-600 dark:text-gray-300 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
           Maximize a segurança e eficiência da sua frota
         </p>
         <div className="space-y-4 sm:space-y-6">
@@ -131,7 +136,7 @@ export function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-gradient-to-r from-indigo-600 to-indigo-400 py-12 sm:py-16 text-center text-white px-4 sm:px-6">
+      <section className="bg-gradient-to-r from-indigo-600 to-indigo-400  py-12 sm:py-16 text-center text-white px-4 sm:px-6">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">
           Pronto para Revolucionar a Segurança da sua Frota?
         </h2>
@@ -139,12 +144,12 @@ export function Home() {
           Baixe nossa aplicação e descubra como ela transforma a segurança e eficiência da sua frota em tempo real.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-indigo-600 font-semibold rounded-md px-8 py-3 hover:bg-gray-100 transition-colors duration-200 shadow-md">
+          <button className="bg-white text-indigo-600 dark:text-purple-600 font-semibold rounded-md px-8 py-3 hover:bg-gray-100 dark:hover:bg-gray-200 transition-colors duration-200 shadow-md">
             <span className="flex items-center justify-center gap-2">
               📱 Google Play
             </span>
           </button>
-          <button className="bg-white text-indigo-600 font-semibold rounded-md px-8 py-3 hover:bg-gray-100 transition-colors duration-200 shadow-md">
+          <button className="bg-white text-indigo-600 dark:text-purple-600 font-semibold rounded-md px-8 py-3 hover:bg-gray-100 dark:hover:bg-gray-200 transition-colors duration-200 shadow-md">
             <span className="flex items-center justify-center gap-2">
               🍎 App Store
             </span>
@@ -159,13 +164,13 @@ export function Home() {
 
 function FeatureItem({ number, title, description }) {
   return (
-    <div className="flex gap-4 items-start p-4 sm:p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
-      <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-sm sm:text-base">
+    <div className="flex gap-4 items-start p-4 sm:p-6 bg-white dark:bg-slate-700 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200">
+      <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-indigo-600 dark:bg-blue-500 text-white flex items-center justify-center font-bold text-sm sm:text-base">
         {number}
       </div>
       <div>
-        <h4 className="font-semibold text-base sm:text-lg mb-2">{title}</h4>
-        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{description}</p>
+        <h4 className="font-semibold text-base sm:text-lg mb-2 dark:text-gray-100">{title}</h4>
+        <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">{description}</p>
       </div>
     </div>
   );
@@ -173,23 +178,23 @@ function FeatureItem({ number, title, description }) {
 
 function InnovativeFeature({ icon, title, description }) {
   return (
-    <div className="bg-white p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 cursor-pointer">
+    <div className="bg-white dark:bg-slate-700 p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-200 cursor-pointer">
       <div className="mb-4 text-3xl sm:text-4xl">{icon}</div>
-      <h5 className="font-semibold text-base sm:text-lg mb-2">{title}</h5>
-      <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{description}</p>
+      <h5 className="font-semibold text-base sm:text-lg mb-2 dark:text-gray-100">{title}</h5>
+      <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed">{description}</p>
     </div>
   );
 }
 
 function BenefitItem({ icon, title, description }) {
   return (
-    <div className="flex items-start gap-4 p-4 sm:p-6 border border-gray-200 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow duration-200 cursor-pointer">
-      <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl">
+    <div className="flex items-start gap-4 p-4 sm:p-6 border border-gray-200 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 shadow-lg hover:shadow-xl transition-shadow duration-200 cursor-pointer">
+      <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-indigo-600 dark:bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg sm:text-xl">
         {icon}
       </div>
       <div>
-        <h5 className="font-semibold text-base sm:text-lg mb-2">{title}</h5>
-        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">{description}</p>
+        <h5 className="font-semibold text-base sm:text-lg mb-2 dark:text-gray-100">{title}</h5>
+        <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">{description}</p>
       </div>
     </div>
   );
