@@ -10,69 +10,61 @@ import grassBackgroundDark from "../assets/reseba.png";
 export function Jogo() {
   const { theme } = useContext(ThemeContext);
 
-  // Aqui inverti: se o tema for "dark", usa as imagens/light, senão usa as dark
   const currentTruckScene = theme === "dark" ? truckSceneLight : truckSceneDark;
   const currentGrassBackground = theme === "dark" ? grassBackgroundLight : grassBackgroundDark;
 
   const MainContent = () => (
     <main className="w-full">
-      {/* Desktop Version - Hidden on Mobile */}
       <div className="hidden md:block">
-        {/* Hero Section */}
         <section className="relative w-full h-[700px]">
           <img
             src={currentTruckScene}
             alt="Stay Awake truck scene"
             className="w-full h-full object-cover"
           />
-          {/* Texto + botão */}
           <div
             className={`absolute top-[10%] left-1/2 transform -translate-x-1/2 flex flex-col items-center text-center px-6 ${
               theme === "dark" ? "text-[#9B9B95]" : "text-white"
             }`}
           >
             <h2
-              className={`text-4xl md:text-5xl font-bold font-poppins mb-2 ${
+              className={`text-2xl md:text-4xl font-bold font-poppins mb-4 ml-80 ${
                 theme === "dark" ? "text-[#9B9B95]" : "text-yellow-400"
               }`}
             >
               STAY AWAKE
             </h2>
-            <button
-              className={`font-bold py-3 px-6 rounded-lg text-xl shadow-md transition ${
-                theme === "dark"
-                  ? "bg-transparent border border-[#9B9B95] text-[#9B9B95] hover:opacity-80"
-                  : "bg-yellow-500 hover:bg-yellow-600 text-black"
-              }`}
-            >
+          </div>
+
+          <div className="absolute top-[72%] left-[7%]">
+            <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-10 px-15 rounded-lg text-3xl shadow-md transition">
               JOGUE AGORA
             </button>
           </div>
+
         </section>
 
-        {/* Content Section */}
         <section className="w-full relative">
           <div className="w-full h-[749px] relative">
             <img
               src={currentGrassBackground}
               alt="Grass background"
-              className="w-full h-full object-cover"
+              className="w-full h-full "
             />
 
             <div className="absolute inset-0 flex items-center justify-center px-8">
               <div className="grid md:grid-cols-2 gap-12 items-center w-full max-w-6xl">
-                {/* Vídeo */}
-                <div className="w-full flex flex-col justify-center items-center">
+                <div className="w-full flex flex-col justify-center items-end">
                   <h3
-                    className={`text-2xl font-bold uppercase mb-4 ${
-                      theme === "dark" ? "text-[#9B9B95]" : "text-white"
+                    className={`text-2xl font-bold uppercase mb-8 mr-30 ${
+                      theme === "dark" ? "text-[#9B9B95]" : "text-yellow-400"
                     }`}
                   >
                     ASSISTA O TRAILER A BAIXO
                   </h3>
                   <iframe
-                    width="560"
-                    height="315"
+                    width="600"
+                    height="400"
                     src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                     title="Stay Awake Gameplay"
                     frameBorder="0"
@@ -83,21 +75,18 @@ export function Jogo() {
                 </div>
 
                 {/* Texto */}
-                <div className="text-right max-w-lg">
+                <div className="text-center max-w-lg ml-50">
                   <p
-                    className={`text-lg leading-relaxed font-poppins ${
+                    className={`text-3xl leading-relaxed font-poppins ${
                       theme === "dark" ? "text-[#9B9B95]" : "text-yellow-400"
                     }`}
                   >
                     <strong>Stay Awake</strong> é um jogo top-down onde você
                     controla um caminhoneiro com narcolepsia em uma corrida contra
                     o sono.
-                    <br />
-                    <br />
                     Enfrente estradas perigosas, obstáculos inesperados e vença o
                     maior inimigo: o próprio cansaço.
-                    <br />
-                    <br />
+
                     Você consegue mantê-lo acordado até o fim da jornada?
                   </p>
                 </div>
@@ -157,8 +146,8 @@ export function Jogo() {
             </div>
           </div>
 
-          {/* Description Text */}
-          <div className="text-center px-4">
+          {/* Descrição */}
+          <div className="text-center px-8">
             <p className="text-yellow-400 text-lg leading-relaxed font-poppins">
               Stay Awake é um jogo top-down onde você controla um caminhoneiro com narcolepsia em uma corrida contra o sono. Enfrente estradas perigosas, obstáculos inesperados e vença o maior inimigo: o próprio cansaço. Você consegue mantê-lo acordado até o fim da jornada?
             </p>
