@@ -19,72 +19,72 @@ export function Pecas() {
         "Bateria recarregável de íons de lítio para alimentação do circuito",
       quantity: 2,
       price: "R$90,00",
-      image: bateria, // Placeholder image
+      image: bateria, 
     },
     {
       name: "Buzzer 5V",
       description: "Emissor sonoro para alertas e sinais",
       quantity: 1,
       price: "R$3,50",
-      image: buzzer, // Placeholder image
+      image: buzzer, 
     },
     {
       name: "ESP32",
       description: "Microcontrolador com Wi-Fi e Bluetooth integrado",
       quantity: 2,
       price: "R$120,00",
-      image: esp32, // Placeholder image
+      image: esp32, 
     },
     {
       name: "MPU-6050",
       description: "Acelerômetro e giroscópio para detecção de movimentos",
       quantity: 1,
       price: "R$30,00",
-      image: mpu, // Placeholder image
+      image: mpu, 
     },
     {
       name: "Push Button",
       description: "Botão tátil para acionamento manual de funções",
       quantity: 4,
       price: "R$2,80",
-      image: button, // Placeholder image
+      image: button, 
     },
     {
       name: "Sensor IR",
       description: "Sensor infravermelho para detecção de obstáculos",
       quantity: 1,
       price: "R$7,00",
-      image: sensorir, // Placeholder image
+      image: sensorir, 
     },
     {
       name: "TP4056",
       description: "Módulo para carregamento seguro de baterias de lítio",
       quantity: 2,
       price: "R$12,00",
-      image: TP4046, // Placeholder image
+      image: TP4046, 
     },
     {
       name: "Óculos simples",
       description: "Óculos básico, leve e confortável",
       quantity: 1,
       price: "R$121,50",
-      image: oculos, // Placeholder image
+      image: oculos, 
     },
   ]
 
-  // Estado para controlar a página atual (grupos de 3 itens)
+
   const [currentPage, setCurrentPage] = useState(0)
   const itemsPerPage = 3
   const totalPages = Math.ceil(items.length / itemsPerPage)
 
-  // Função para obter os itens da página atual
+
   const getCurrentItems = () => {
     const startIndex = currentPage * itemsPerPage
     const endIndex = startIndex + itemsPerPage
     return items.slice(startIndex, endIndex)
   }
 
-  // Funções de navegação
+
   const goToNextPage = () => {
     if (currentPage < totalPages - 1) {
       setCurrentPage(currentPage + 1)
@@ -99,7 +99,7 @@ export function Pecas() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#001128] font-inter py-8 px-4 sm:py-16 sm:px-10 flex flex-col items-center text-gray-900 dark:text-white">
-      {/* Title */}
+
       <div className="text-center mb-8 sm:mb-12">
         <h1 className="text-[#4A74FF] text-3xl sm:text-5xl font-bold font-poppins mb-2 leading-tight">
           Itens do Projeto
@@ -107,9 +107,9 @@ export function Pecas() {
         <div className="w-24 sm:w-32 h-1 bg-[#4A74FF] mx-auto"></div>
       </div>
 
-      {/* Items Table Container */}
+
       <div className="bg-white dark:bg-[#001128] rounded-2xl sm:rounded-3xl p-4 sm:p-8 max-w-sm sm:max-w-4xl w-full shadow-lg mb-6 sm:mb-8 border border-gray-200 dark:border-gray-700">
-        {/* Table Header - Desktop */}
+
         <div className="hidden sm:grid sm:grid-cols-4 bg-[#4A74FF] text-white font-bold font-poppins text-lg sm:text-xl py-4 px-6 rounded-t-xl">
           <div>Item</div>
           <div>Descrição</div>
@@ -117,7 +117,7 @@ export function Pecas() {
           <div className="text-right">Valor</div>
         </div>
 
-        {/* Scrollable Items Container */}
+
         <div className="space-y-4 sm:space-y-0">
           {getCurrentItems().map((item, index) => (
             <div
@@ -125,7 +125,7 @@ export function Pecas() {
               className="bg-white dark:bg-[#001128] border-b border-gray-200 dark:border-gray-700 p-4 sm:p-0 rounded-lg sm:rounded-none"
             >
               <div className="sm:grid sm:grid-cols-4 sm:py-4 sm:px-6 items-center">
-                {/* Item - Mobile */}
+
                 <div className="flex items-center space-x-3 mb-3 sm:mb-0">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center overflow-hidden">
                     {item.image ? (
@@ -144,12 +144,12 @@ export function Pecas() {
                   </div>
                 </div>
 
-                {/* Description - Desktop only */}
+                
                 <div className="hidden sm:block text-gray-900 dark:text-white font-normal">
                   {item.description}
                 </div>
 
-                {/* Quantity and Value - Mobile */}
+               
                 <div className="flex justify-between sm:hidden">
                   <span className="text-sm text-gray-600 dark:text-gray-400">
                     Qtd:{" "}
@@ -162,12 +162,12 @@ export function Pecas() {
                   </span>
                 </div>
 
-                {/* Quantity - Desktop */}
+                
                 <div className="hidden sm:block text-center text-gray-900 dark:text-white font-normal">
                   {item.quantity}
                 </div>
 
-                {/* Value - Desktop */}
+               
                 <div className="hidden sm:block text-right text-gray-900 dark:text-white font-normal">
                   {item.price}
                 </div>
@@ -176,7 +176,7 @@ export function Pecas() {
           ))}
         </div>
 
-        {/* Navigation Controls */}
+      
         <div className="flex justify-between items-center mt-6 sm:mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
           <button
             onClick={goToPrevPage}
@@ -220,7 +220,7 @@ export function Pecas() {
           </button>
         </div>
 
-        {/* Total Value */}
+       
         <div className="mt-6 sm:mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
           <div className="flex justify-between items-center">
             <span className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white font-poppins">
@@ -233,7 +233,7 @@ export function Pecas() {
         </div>
       </div>
 
-      {/* Final Result Section */}
+     
       <div className="bg-white dark:bg-[#001128] rounded-2xl sm:rounded-3xl p-6 sm:p-8 max-w-sm sm:max-w-4xl w-full shadow-lg border border-gray-200 dark:border-gray-700 mt-6 sm:mt-8">
         <div className="text-center mb-6">
           <h2 className="text-[#4A74FF] text-xl sm:text-2xl font-bold font-poppins">
@@ -241,7 +241,7 @@ export function Pecas() {
           </h2>
         </div>
 
-        {/* Image Placeholder */}
+        
         <div className="bg-gray-100 dark:bg-gray-800 rounded-xl h-48 sm:h-80 flex items-center justify-center border-2 border-dashed border-gray-300 dark:border-gray-600">
           <div className="text-center">
             <div className="w-16 h-16 sm:w-24 sm:h-24 bg-gray-300 dark:bg-gray-700 rounded-lg mx-auto mb-4 flex items-center justify-center">

@@ -14,7 +14,6 @@ import grafico from "../assets/grafico.png"
 export function Home() {
   return (
     <div className="font-sans text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-slate-900 min-h-screen">
-      {/* Hero Section */}
       <section className="bg-gray-200 dark:bg-slate-800 py-8 sm:py-12 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12">
           <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
@@ -39,7 +38,7 @@ export function Home() {
 
           <div className="w-full lg:w-1/2  rounded-3xl  p-6 sm:p-10 flex justify-center items-center">
 
-            {/* Placeholder for image */}
+
 
             <img src={bracelete}
               alt="Óculos e Bracelete StayOn"
@@ -49,7 +48,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* Como Funciona */}
+
       <section className="max-w-6xl mx-auto text-center px-4 sm:px-6 py-12 sm:py-16">
         <h2 className="text-[24px] lg:text-[50px] font-poppins font-bold lg:font-normal mb-4 text-gray-900 dark:text-gray-100">
           Como Funciona
@@ -84,7 +83,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* Recursos Inovadores */}
+
       <section className="bg-gray-200 dark:bg-slate-800 py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto text-center mb-8 sm:mb-12">
 
@@ -120,7 +119,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* Benefícios para Empresas */}
+
       <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <h2 className="text-[24px] lg:text-[50px] font-poppins font-bold lg:font-normal mb-6 sm:mb-8 text-center text-gray-900 dark:text-gray-100">
           Benefícios para Empresas
@@ -153,7 +152,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* Call to Action */}
+
       <section className="bg-gradient-to-r from-indigo-600 to-indigo-400  py-12 sm:py-16 text-center text-white px-4 sm:px-6">
         <div className="mx-5">
 
@@ -181,7 +180,7 @@ export function Home() {
   );
 }
 
-// Componentes auxiliares para facilitar o código
+
 
 function FeatureItem({ number, title, description }) {
   return (
@@ -190,7 +189,7 @@ function FeatureItem({ number, title, description }) {
         {number}
       </div>
 
-      {/* Container do texto */}
+
       <div>
         <h4 className="font-semibold font-['Poppins'] leading-tight text-xl mb-2 dark:text-gray-100">
           {title}
@@ -228,9 +227,8 @@ function CompanyBenefits({ iconSrc, title, description }) {
         <img src={iconSrc} alt={title} className="w-full h-full object-contain" />
       </div>
 
-      {/* Container do texto */}
-      {/* - Padrão (mobile): Texto centralizado. */}
-      {/* - sm: (desktop): Texto alinhado à esquerda. */}
+
+
       <div className="text-center sm:text-left">
         <h5 className="font-semibold font-['Poppins'] leading-tight text-xl mb-2 dark:text-gray-100">
           {title}

@@ -7,6 +7,11 @@ import grassBackgroundLight from "../assets/resebanoite.png";
 import truckSceneDark from "../assets/caminoao.png"; 
 import grassBackgroundDark from "../assets/reseba.png"; 
 
+
+import caminoaocellpreto from "../assets/caminoaocellpreto.png";
+import caminoaocell from "../assets/caminoaocell.png";
+
+
 export function Jogo() {
   const { theme } = useContext(ThemeContext);
 
@@ -37,7 +42,7 @@ export function Jogo() {
           </div>
 
           <div className="absolute top-[72%] left-[7%]">
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-10 px-15 rounded-lg text-3xl shadow-md transition">
+            <button className={`font-bold py-10 px-15 rounded-lg text-3xl shadow-md transition ${theme === "dark" ? "bg-stone-400 text-black" : "bg-yellow-500 text-black hover:bg-yellow-600"}`}>
               JOGUE AGORA
             </button>
           </div>
@@ -74,7 +79,7 @@ export function Jogo() {
                   ></iframe>
                 </div>
 
-                {/* Texto */}
+
                 <div className="text-center max-w-lg ml-50">
                   <p
                     className={`text-3xl leading-relaxed font-poppins ${
@@ -96,44 +101,76 @@ export function Jogo() {
         </section>
       </div>
 
-      {/* Mobile Version - Exact Figma Layout */}
+
       <div className="block md:hidden w-full min-h-screen relative overflow-hidden">
-        {/* Top Background Image Section */}
-        <div className="relative w-full h-[50vh]">
+
+        <div className="relative w-full h-[70vh]">
+
+
+
+          
+            {theme === "dark" ? (
           <img 
-            src={currentTruckScene}
+            src={caminoaocellpreto}
             alt="Stay Awake truck scene"
             className="w-full h-full object-cover"
           />
+            ) : (
+          <img 
+            src={caminoaocell}
+            alt="Stay Awake truck scene"
+            className="w-full h-full object-cover"
+          />
+            )}
+
+
+
+
+
         </div>
 
-        {/* Bottom Content Section */}
         <div className={`w-full flex-1 px-6 py-8 ${
           theme === "dark" 
-            ? "bg-gradient-to-b from-slate-900 to-orange-800" 
+            ? "bg-gradient-to-b from-slate-900 to-blue-950" 
             : "bg-gradient-to-b from-slate-900 to-orange-500"
         }`}>
           
-          {/* JOGUE AGORA Button */}
+
           <div className="mb-8 flex justify-center">
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-12 rounded-2xl text-xl shadow-lg transition-colors">
+            <button className={`font-bold py-4 px-12 rounded-2xl text-xl shadow-lg transition-colors ${theme === "dark" ? "bg-stone-400 text-black" : "bg-yellow-500 text-black hover:bg-yellow-600"}`}>
               JOGUE AGORA
             </button>
           </div>
 
-          {/* ASSISTA O TRAILER Text */}
+
           <div className="mb-6 text-center">
+
+
+            {theme === "dark" ? (
+            <h3 className="text-white text-2xl font-normal font-poppins uppercase">
+              ASSISTA O TRAILER<br />A BAIXO
+            </h3>
+            ) : (
             <h3 className="text-orange-600 text-2xl font-normal font-poppins uppercase">
               ASSISTA O TRAILER<br />A BAIXO
             </h3>
+            )}
+
+
+
           </div>
 
-          {/* Video Container */}
+
           <div className="mb-8 flex justify-center">
             <div className="relative w-64 h-36 bg-zinc-800 rounded-lg">
-              {/* Play Button */}
+              
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center shadow-lg">
+
+
+                <div className={`w-16 h-16  ${theme === "dark" ? " bg-blue-900" : "bg-yellow-500"} rounded-full flex items-center justify-center shadow-lg`}>
+
+
+
                   <svg 
                     className="w-6 h-6 text-black ml-1" 
                     fill="currentColor" 
@@ -146,11 +183,21 @@ export function Jogo() {
             </div>
           </div>
 
-          {/* Descrição */}
+
           <div className="text-center px-8">
+
+            {theme === "dark" ? (
+            <p className="text-white text-lg leading-relaxed font-poppins">
+              Stay Awake é um jogo top-down onde você controla um caminhoneiro com narcolepsia em uma corrida contra o sono. Enfrente estradas perigosas, obstáculos inesperados e vença o maior inimigo: o próprio cansaço. Você consegue mantê-lo acordado até o fim da jornada?
+            </p>
+            ) : (
             <p className="text-yellow-400 text-lg leading-relaxed font-poppins">
               Stay Awake é um jogo top-down onde você controla um caminhoneiro com narcolepsia em uma corrida contra o sono. Enfrente estradas perigosas, obstáculos inesperados e vença o maior inimigo: o próprio cansaço. Você consegue mantê-lo acordado até o fim da jornada?
             </p>
+            )}
+
+
+
           </div>
         </div>
       </div>

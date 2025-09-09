@@ -4,7 +4,7 @@ import lucas from "../assets/lucas.jpeg";
 import pedro from "../assets/pedro.jpg";
 import victor from "../assets/victor.jpg";
 import guilherme from "../assets/guilherme.jpg";
-import stayOnLogo from "../assets/stayon.png"; // Add the StayOn logo image
+import stayOnLogo from "../assets/stayon.png"; 
 import { Link } from "react-router";
 
 
@@ -40,7 +40,7 @@ export function QuemSomos() {
 
     return (
         <div className="min-h-screen bg-white dark:bg-[#001128] font-inter transition-colors duration-300">
-            {/* Mobile Layout */}
+
             <div className="md:hidden px-4 py-8">
                 <div className="text-center mb-8">
                     <h1 className="text-xl font-semibold text-[#4A74FF] mb-0 font-poppins">Conheça nossa equipe</h1>
@@ -71,7 +71,7 @@ export function QuemSomos() {
                 </div>
             </div>
 
-            {/* Desktop Layout */}
+
             <div className="hidden md:block px-8 py-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-2">
@@ -79,7 +79,7 @@ export function QuemSomos() {
                     </div>
 
                     <div className="relative flex items-center justify-center min-h-[600px]">
-                        {/* Central StayOn Logo Image */}
+
                         <div className="absolute inset-0 flex items-center justify-center">
                             <img
                                 src={stayOnLogo}
@@ -88,8 +88,7 @@ export function QuemSomos() {
                             />
                         </div>
 
-                        {/* Team Members positioned around the logo */}
-                        {/* Top Left */}
+
                         <div className="absolute top-16 left-24">
                             <div className="flex flex-col items-center">
                                 <div className="w-40 h-40 rounded-full overflow-hidden mb-4 border-2 border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -103,7 +102,7 @@ export function QuemSomos() {
                             </div>
                         </div>
 
-                        {/* Top Right */}
+
                         <div className="absolute top-16 right-24">
                             <div className="flex flex-col items-center">
                                 <div className="w-40 h-40 rounded-full overflow-hidden mb-4 border-2 border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -117,7 +116,7 @@ export function QuemSomos() {
                             </div>
                         </div>
 
-                        {/* Bottom Left */}
+
                         <div className="absolute bottom-16 left-24">
                             <div className="flex flex-col items-center">
                                 <div className="w-40 h-40 rounded-full overflow-hidden mb-4 border-2 border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -131,7 +130,7 @@ export function QuemSomos() {
                             </div>
                         </div>
 
-                        {/* Bottom Right */}
+
                         <div className="absolute bottom-16 right-24">
                             <div className="flex flex-col items-center">
                                 <div className="w-40 h-40 rounded-full overflow-hidden mb-4 border-2 border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-shadow duration-300">
