@@ -98,10 +98,10 @@ export function Pecas() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-[#001128] font-inter py-8 px-4 sm:py-16 sm:px-10 flex flex-col items-center text-gray-900 dark:text-white">
+    <div className="min-h-screen bg-gradient-to-r from-[#DAE3E5] to-[#E5E6E6] dark:from-[#001228] dark:to-[#35363D] font-inter py-8 px-4 sm:py-16 sm:px-10 flex flex-col items-center text-gray-900 dark:text-white">
 
       <div className="text-center mb-8 sm:mb-12">
-        <h1 className="text-[#4A74FF] text-3xl sm:text-5xl font-bold font-poppins mb-2 leading-tight">
+        <h1 className="bg-gradient-to-r from-[#2A42B2] to-[#4A6FFF] bg-clip-text text-transparent text-3xl sm:text-5xl font-bold font-poppins mb-2 leading-tight">
           Itens do Projeto
         </h1>
         <div className="w-24 sm:w-32 h-1 bg-[#4A74FF] mx-auto"></div>

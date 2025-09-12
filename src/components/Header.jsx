@@ -24,7 +24,7 @@ export function Header() {
         <header className="fixed top-0 left-0 w-full flex items-center justify-between px-8 py-6 bg-white dark:bg-[#001228] shadow-sm z-50">
 
           {/* Desktop Logo - visible on md and up */}
-          <div className="hidden md:block text-xl font-bold text-indigo-700 ">StayOn</div>
+          <div className="hidden md:block text-xl font-bold text-indigo-700 font-poppins font-bold text-[24px]">StayOn</div>
 
           {/* Desktop Navigation - visible on md and up */}
           <nav className="hidden md:block">

@@ -1,21 +1,23 @@
 import React from "react"
+import { Link } from "react-router";
+
 
 export function Produto() {
   return (
-    <div className="min-h-screen bg-[linear-gradient(135deg,#E5E6E6,#DAE3E5)] font-inter py-8 px-4 sm:py-16 sm:px-10 flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-r from-[#DAE3E5] to-[#E5E6E6] dark:from-[#001228] dark:to-[#35363D] font-inter py-8 px-4 sm:py-16 sm:px-10 flex flex-col items-center">
       {/* Title */}
       <div className="text-center mb-8 sm:mb-12">
-        <h1 className="text-blue-500 text-3xl sm:text-5xl font-bold font-poppins mb-2 leading-tight">
+        <h1 className="bg-gradient-to-r from-[#2A42B2] to-[#4A6FFF] bg-clip-text text-transparent text-3xl sm:text-5xl font-bold font-poppins mb-2 leading-tight">
           <span className="block sm:inline">Instruções</span>
           <span className="block sm:inline sm:ml-2">de Uso</span>
         </h1>
-        <p className="text-blue-500 text-base font-bold font-poppins">
+        <p className="bg-gradient-to-r from-[#2A42B2] to-[#4A6FFF] bg-clip-text text-transparent text-base font-bold font-poppins">
           (Como Utilizar)
         </p>
       </div>
 
       {/* Instructions Container */}
-      <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 max-w-sm sm:max-w-4xl w-full shadow-lg">
+      <div className="bg-white dark:bg-[#162534]  rounded-2xl sm:rounded-3xl p-6 sm:p-10 max-w-sm sm:max-w-4xl w-full shadow-lg">
         {/* Step 1 */}
         <div className="flex items-start mb-6 sm:mb-10">
           <div className="bg-blue-500 text-white text-lg sm:text-5xl font-bold font-poppins w-8 h-8 sm:w-20 sm:h-20 rounded-full flex items-center justify-center mr-4 sm:mr-8 flex-shrink-0 leading-none">
@@ -25,7 +27,7 @@ export function Produto() {
             <h2 className="text-blue-500 text-lg sm:text-4xl font-bold font-poppins mb-2 sm:mb-4">
               Primeiro passo
             </h2>
-            <p className="text-slate-900 text-sm sm:text-2xl font-normal font-poppins leading-relaxed">
+            <p className="text-slate-900 text-sm sm:text-2xl font-normal font-poppins leading-relaxed dark:text-white">
               -Retire cuidadosamente o óculos juntamente com o bracelete da
               embalagem
               <br />
@@ -43,7 +45,7 @@ export function Produto() {
             <h2 className="text-blue-500 text-lg sm:text-4xl font-bold font-poppins mb-2 sm:mb-4">
               Segundo passo
             </h2>
-            <p className="text-slate-900 text-sm sm:text-2xl font-normal font-poppins leading-relaxed">
+            <p className="text-slate-900 text-sm sm:text-2xl font-normal font-poppins leading-relaxed dark:text-white">
               -Aperte o botão de ligar ao lado do óculos
               <br />
               -E o botão esquerdo do bracelete
@@ -60,7 +62,7 @@ export function Produto() {
             <h2 className="text-blue-500 text-lg sm:text-4xl font-bold font-poppins mb-2 sm:mb-4">
               Terceiro passo
             </h2>
-            <p className="text-slate-900 text-sm sm:text-2xl font-normal font-poppins leading-relaxed">
+            <p className="text-slate-900 text-sm sm:text-2xl font-normal font-poppins leading-relaxed dark:text-white">
               -Faça login indo nas configurações do dispositivo
               <br />
               com seu endereço de E-mail
@@ -80,17 +82,22 @@ export function Produto() {
             <span className="sm:hidden">Vídeo (em breve)</span>
           </div>
         </div>
+        
+        <Link to="/pecas">
 
         {/* Items Button - Mobile */}
-        <button className="sm:hidden bg-slate-800 hover:bg-slate-900 text-white text-base font-normal font-poppins py-3 px-6 rounded-full w-full transition-all duration-300 ease-in-out">
+        <button className="sm:hidden bg-slate-800 hover:bg-slate-900 text-white text-base font-bold text-[20px] py-3 px-6 rounded-full w-full transition-all duration-300 ease-in-out">
           Itens do Projeto
         </button>
+        </Link>
       </div>
 
+      <Link to="/pecas" className="hidden sm:block bg-slate-800 hover:bg-slate-900 text-white text-2xl font-bold text-[28px] py-4 px-10 rounded-full mt-10 transition-all duration-300 ease-in-out"> 
       {/* Items Button - Desktop */}
-      <button className="hidden sm:block bg-slate-800 hover:bg-slate-900 text-white text-2xl font-normal font-poppins py-4 px-10 rounded-full mt-10 transition-all duration-300 ease-in-out">
+
         Itens do Projeto
-      </button>
+      </Link>
+
     </div>
   )
 }

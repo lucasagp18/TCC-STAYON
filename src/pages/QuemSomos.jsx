@@ -39,11 +39,12 @@ export function QuemSomos() {
     ];
 
     return (
-        <div className="min-h-screen bg-white dark:bg-[#001128] font-inter transition-colors duration-300">
+        <div className="min-h-screen bg-gradient-to-r from-[#DAE3E5] to-[#E5E6E6] dark:from-[#001228] dark:to-[#35363D] transition-colors duration-300 font-poppins font-bold text-[48px]">
+
 
             <div className="md:hidden px-4 py-8">
                 <div className="text-center mb-8">
-                    <h1 className="text-xl font-semibold text-[#4A74FF] mb-0 font-poppins">Conheça nossa equipe</h1>
+                    <h1 className="text-xl bg-gradient-to-r from-[#2A42B2] to-[#4A6FFF] bg-clip-text text-transparent mb-0 font-poppins">Conheça nossa equipe</h1>
                 </div>
 
                 <div className="space-y-10 flex flex-col items-center">
@@ -64,7 +65,7 @@ export function QuemSomos() {
                 <div className="text-center mt-20">
 
                     <Link to="/referencias"
-                        className="hover:text-blue-800 underline underline-offset-2 dark:text-gray-300">
+                        className="hover:text-blue-800 underline underline-offset-2 dark:text-gray-300 font-poppins font-bold text-[20px]">
                         Referências
                     </Link>
 
@@ -75,7 +76,7 @@ export function QuemSomos() {
             <div className="hidden md:block px-8 py-6">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-2">
-                        <h1 className="text-4xl font-semibold text-[#4A74FF] mb-6 font-poppins">Conheça nossa equipe</h1>
+                        <h1 className="text-4xl font-semibold bg-gradient-to-r from-[#2A42B2] to-[#4A6FFF] bg-clip-text text-transparent mb-6 font-poppins font-bold text-[48px]">Conheça nossa equipe</h1>
                     </div>
 
                     <div className="relative flex items-center justify-center min-h-[600px]">
@@ -150,7 +151,7 @@ export function QuemSomos() {
 
 
                         <Link to="/referencias"
-                            className="hover:text-blue-800 underline underline-offset-2 dark:text-gray-300">
+                            className="hover:text-blue-800 underline underline-offset-2 dark:text-gray-300 font-poppins font-bold text-[30px]">
                             Referências
                         </Link>
 
