@@ -7,7 +7,7 @@ import button from "../assets/button.png";
 import sensorir from "../assets/sensor_IR.png";
 import TP4046 from "../assets/TP4056.png";
 import oculos from "../assets/oculos.webp";
-
+import gps from "../assets/gps.png";
 
 
 export function Pecas() {
@@ -17,8 +17,8 @@ export function Pecas() {
       name: "Bateria",
       description:
         "Bateria recarregável de íons de lítio para alimentação do circuito",
-      quantity: 2,
-      price: "R$90,00",
+      quantity: 1,
+      price: "R$45,00",
       image: bateria, 
     },
     {
@@ -32,7 +32,7 @@ export function Pecas() {
       name: "ESP32",
       description: "Microcontrolador com Wi-Fi e Bluetooth integrado",
       quantity: 2,
-      price: "R$120,00",
+      price: "R$60,00",
       image: esp32, 
     },
     {
@@ -45,7 +45,7 @@ export function Pecas() {
     {
       name: "Push Button",
       description: "Botão tátil para acionamento manual de funções",
-      quantity: 4,
+      quantity: 2,
       price: "R$2,80",
       image: button, 
     },
@@ -67,9 +67,17 @@ export function Pecas() {
       name: "Óculos simples",
       description: "Óculos básico, leve e confortável",
       quantity: 1,
-      price: "R$121,50",
+      price: "R$55,50",
       image: oculos, 
     },
+    {
+      name: "Módulo GPS NEO-6M",
+      description: "Óculos básico, leve e confortável",
+      quantity: 1,
+      price: "R$49,90",
+      image: gps, 
+    },
+    
   ]
 
 
@@ -227,7 +235,7 @@ export function Pecas() {
               Valor Total
             </span>
             <span className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white font-poppins">
-              R$290,30
+              R$337,80
             </span>
           </div>
         </div>
